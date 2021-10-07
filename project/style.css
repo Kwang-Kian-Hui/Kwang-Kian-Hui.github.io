@@ -1,6 +1,7 @@
 /* fonts */
 @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 :root{
     --bg-black-900: #000000;
@@ -19,6 +20,7 @@ body{
     line-height: 1.5;
     overflow-x: hidden;
     background-color: var(--bg-black-50);
+    font-family: "Roboto";
 }
 
 *{
@@ -88,6 +90,70 @@ img{
     box-shadow: var(--inner-shadow);
 }
 
+.align-items-center{
+    align-items: center;
+}
+
+.btn-1{
+    padding: 10px 25px;
+    font-size: 16px;
+    font-weight: 500;
+    color: lightslategray;
+    background-color: transparent;
+    line-height: 1.5;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-1:after{
+    border-radius: 30px;
+}
+
+.background-effect .effect{
+    position: absolute;
+    z-index: -1;
+}
+
+.effect-1{
+    width: 30px;
+    height: 30px;
+    border: 4px solid #8a49ff;
+    right: 10%;
+    bottom: 10%;
+    animation: spin 10s linear infinite;
+}
+
+@keyframes spin{
+    0%{
+        transform:rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.section-title{
+    padding: 0 15px;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+}
+
+.section-title h2{
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 600;
+    color: lightslategray;
+    margin: 0;
+}
+
+.section.hide{
+    display: none;
+}
+
+/* header */
 .header{
     padding: 20px 15px;
     position: absolute;
@@ -98,12 +164,16 @@ img{
 }
 
 .header .logo a{
-    display: inline-block;
+    /* display: inline-block; */
     text-align: center;
     line-height: 36px;
     height: 40px;
     width: 40px;
-    
+    position: absolute;
+    left: 5%;
+    top: 20px;
+
+
     /* border: 2px solid whitesmoke; */
     border: 2px solid black;
     border-radius: 50%;
@@ -121,6 +191,9 @@ img{
     display: flex;
     align-items: center;
     justify-content: center;
+    position: absolute;
+    right: 5%;
+    top: 20px;
 
     cursor: pointer;
     border-radius: 50%;
@@ -157,18 +230,25 @@ img{
 .header .hamburger-btn span:after{
     top:6px;
 }
+/* header - end */
 
 /* hamburger menu - navigation */
 .nav-menu{
     position: fixed;
     background-color: var(--bg-black-50);
-    padding: 0 15px;
-    left: 0;
-    top: 0;
     width: 100%;
     height: 100%;
-    z-index: 999;
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
     overflow-y: auto;
+}
+
+.nav-menu.open{
+    visibility: visible;
+    opacity: 1;
+    z-index: 999;
+    transition: all 0.3s ease-in;
 }
 
 .nav-menu .close-nav-menu{
@@ -179,12 +259,12 @@ img{
     line-height: 40px;
     border-radius: 50%;
     position: absolute;
-    right: 15px;
-    top: 15px;
+    right: 5%;
+    top: 20px;
     cursor: pointer;
     text-align: center;
     color: var(--text-black-600);
-    transition: all 0.3s ease
+    transition: all 0.3s ease;
 }
 
 .nav-menu .close-nav-menu:after{
@@ -231,3 +311,70 @@ img{
 .nav-menu ul li a:after{
     border-radius: 30px;
 }
+
+/* hamburger menu - navigation - end */
+
+/* home */
+.home-section{
+    position: relative;
+}
+
+.home-section .full-screen{
+    padding-left: 50px ;
+    min-height: 100vh;
+}
+
+.home-section .home-text,
+.home-section .home-img{
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 0 15px;
+
+}
+
+.home-section .home-text h1{
+    font-size: 55px;
+    max-zoom: 2.0;
+    font-weight: 700;
+    color: var(--text-black-900);
+    margin: 0;
+}
+
+.home-section .home-text h2{
+    color: var(--text-black-700);
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin: 0;
+}
+
+.home-section .home-text .btn-1{
+    margin-top: 30px;
+}
+
+.home-section .home-img .img-box{
+    height: 50vh;
+    width: 50vh;
+    max-width: 450px;
+    max-height: 450px;
+    display: block;
+    margin: auto;
+    border-radius: 50%;
+    padding: 15px;
+}
+
+.home-section .home-img .img-box img{
+    width: 100%;
+    border-radius: 50%;
+    border: 10px solid transparent;
+}
+/* home - end */
+
+/* about */
+
+.about-section{
+    padding: 80px 0 80px;
+    min-height: 100vh;
+}
+
+/* about - end */
