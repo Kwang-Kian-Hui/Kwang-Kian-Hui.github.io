@@ -11,9 +11,9 @@
     --text-black-700: #555555;
     --text-black-600: #666666;
     --text-black-300: #bbbbbb;
-    --outer-shadow: 3px 3px #d0d0d0, -3px -3px #f8f8f8;
+    --outer-shadow: 0.2vw 0.2vw #d0d0d0, -0.2vw -0.2vw #f8f8f8;
     --outer-shadow-0: 0 0 #d0d0d0, 0 0 #f8f8f8;
-    --inner-shadow: inset 3px 3px #d0d0d0, 3px 3px #f8f8f8;
+    --inner-shadow: inset 0.2vw 0.2vw #d0d0d0, 0.2vw 0.2vw #f8f8f8;
 }
 
 body{
@@ -143,7 +143,7 @@ img{
 
 .section-title h2{
     display: inline-block;
-    font-size: 20px;
+    font-size: 4vh;
     font-weight: 600;
     color: lightslategray;
     margin: 0;
@@ -224,11 +224,11 @@ img{
 }
 
 .header .hamburger-btn span:before{
-    top:-6px;
+    top: -6px;
 }
 
 .header .hamburger-btn span:after{
-    top:6px;
+    top: 6px;
 }
 /* header - end */
 
@@ -244,6 +244,32 @@ img{
     overflow-y: auto;
 }
 
+.fade-out-effect{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    visibility: hidden;
+    background-color: var(--bg-black-50);
+}
+
+.fade-out-effect.active{
+    visibility: visible;
+    z-index: 1000;
+    animation: fadeOut 0.3s ease-out;
+}
+
+@keyframes fadeOut{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
 .nav-menu.open{
     visibility: visible;
     opacity: 1;
@@ -252,15 +278,15 @@ img{
 }
 
 .nav-menu .close-nav-menu{
-    height: 40px;
-    width: 40px;
+    height: 6vh;
+    width: 6vh;
     display: block;
-    font-size: 35px;
-    line-height: 40px;
+    font-size: 5vh;
+    line-height: 6vh;
     border-radius: 50%;
     position: absolute;
     right: 5%;
-    top: 20px;
+    top: 3vh;
     cursor: pointer;
     text-align: center;
     color: var(--text-black-600);
@@ -284,7 +310,7 @@ img{
 
 .nav-menu ul li{
     display: block;
-    margin-bottom: 20px;
+    margin-bottom: 2.4vh;
     text-align: center;
 }
 
@@ -294,14 +320,17 @@ img{
 
 .nav-menu ul li a{
     display: inline-block;
-    width: 200px;
-    font-size: 28px;
+    width: 15vw;
+    font-size: 5vh;
     font-weight: 600;
     color: var(--text-black-700);
-    padding: 5px 30px;
+    padding: 0.6vh 2vw;
     text-transform: capitalize;
     border-radius: 30px;
     transition: all 0.3s ease;
+
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 .nav-menu ul li a.active{
@@ -333,7 +362,7 @@ img{
 }
 
 .home-section .home-text h1{
-    font-size: 55px;
+    font-size: 6vh;
     max-zoom: 2.0;
     font-weight: 700;
     color: var(--text-black-900);
@@ -342,7 +371,7 @@ img{
 
 .home-section .home-text h2{
     color: var(--text-black-700);
-    font-size: 20px;
+    font-size: 4vh;
     font-weight: 500;
     text-transform: capitalize;
     margin: 0;
@@ -350,6 +379,12 @@ img{
 
 .home-section .home-text .btn-1{
     margin-top: 30px;
+    font-size: 3vh;
+    min-zoom: 0.3;
+    width: 11vw;
+    max-width: 400px;
+    min-width: 150px;
+    text-align: center;
 }
 
 .home-section .home-img .img-box{
@@ -375,6 +410,182 @@ img{
 .about-section{
     padding: 80px 0 80px;
     min-height: 100vh;
+}
+
+.about-illustration{
+    flex: 0 0 40%;
+    text-align: center;
+}
+
+.about-info{
+    flex: 0 0 60%;
+    padding: 1em;
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 3vh;
+}
+
+/* ------------------------------------svg animation -------------------------------------*/
+#Headphones{
+    animation: bouncingToBeat 0.5s infinite linear alternate;
+    transform-origin: center;
+    transform-box: fill-box;
+    
+}
+
+#Head{
+    animation: bouncingToBeat 0.5s infinite linear alternate;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#Left-hand{
+    animation: leftTyping 0.4s infinite linear alternate;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#Right-hand{
+    animation: rightTyping 0.2s infinite linear alternate;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#contribution-1,
+#contribution-2,
+#contribution-3,
+#contribution-4,
+#contribution-5,
+#contribution-6,
+#contribution-7,
+#contribution-8,
+#contribution-9,
+#contribution-10{
+    animation: bounceEffect 2s infinite linear alternate;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#contribution-2{
+    animation-delay: 0.1s;
+}
+
+#contribution-3{
+    animation-delay: 0.2s;
+}
+
+#contribution-3{
+    animation-delay: 0.3s;
+}
+
+#contribution-4{
+    animation-delay: 0.4s;
+}
+
+#contribution-5{
+    animation-delay: 0.5s;
+}
+
+#contribution-6{
+    animation-delay: 0.6s;
+}
+
+#contribution-7{
+    animation-delay: 0.7s;
+}
+
+#contribution-8{
+    animation-delay: 0.8s;
+}
+
+#contribution-9{
+    animation-delay: 0.9s;
+}
+
+#contribution-10{
+    animation-delay: 1s;
+}
+
+@keyframes bouncingToBeat{
+    from{
+        transform: translateY(-5px) rotateZ(0deg);
+    }
+    to{
+        transform: translateY(5px) rotateZ(-5deg);
+    }
+}
+
+@keyframes leftTyping{
+    from{
+        transform: translateY(-6px) rotateZ(0deg);
+    }
+    to{
+        transform: translateY(3px) rotateZ(-5deg);
+    }
+}
+
+@keyframes rightTyping{
+    from{
+        transform: translateY(-3px) rotateZ(0deg);
+    }
+    to{
+        transform: translateY(6px) rotateZ(5deg);
+    }
+}
+
+@keyframes bounceEffect{
+    from{
+        tranform: translateY(0px) rotateZ(-4deg);
+    }
+    to{
+        transform: translateY(-100px) rotateZ(4deg);
+    }
+}
+
+/* ----------------------------------------svg animation - end----------------------------------- */
+
+.about-section .social-links{
+    margin-top: 2.6vh;
+    text-align: center;
+}
+
+.about-section .social-links a{
+    display: inline-block;
+    height: 5.2vh;
+    width: 5.2vh;
+    font-size: 3vh;
+    text-align: center;
+    color: var(--text-black-600);
+    margin: 0 4px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.about-section .social-links a i{
+    line-height: 5.2vh;
+}
+
+.about-section .social-links a:after{
+    border-radius: 50%;
+}
+
+.about-section .social-links a:hover{
+    color: lightslategray;
+}
+
+.about-section .about-tabs{
+    padding: 7.9vh 2vh 7.9vh;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+}
+
+.about-section .about-tabs .tab-item{
+    display: inline-block;
+    margin: 0 0.6vh 1.2vh;
+    cursor: pointer;
+    padding: 0.6vh 1.2vh;
+    border-radius: 30px;
 }
 
 /* about - end */
