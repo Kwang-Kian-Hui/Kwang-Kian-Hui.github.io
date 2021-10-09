@@ -55,10 +55,6 @@ img{
     flex-wrap: wrap;
 }
 
-.row2{
-    display: flex;
-}
-
 .justify-content-between{
     justify-content: space-between;
 }
@@ -139,10 +135,11 @@ img{
 }
 
 .section-title{
-    padding: 0 15px;
+    padding: 0 0.2vh;
     flex: 0 0 100%;
     max-width: 100%;
     text-align: center;
+    font-size: 4vh;
 }
 
 /* .section-title h2{
@@ -159,7 +156,7 @@ img{
 
 /* header */
 .header{
-    padding: 20px 15px;
+    padding: 0.26vh 0.2vh;
     position: absolute;
     width: 100%;
     top: 0;
@@ -581,7 +578,7 @@ img{
     font-size: 3vh;
     text-align: center;
     color: var(--text-black-600);
-    margin: 0 4px;
+    margin: 0 0.5vh;
     border-radius: 50%;
     transition: all 0.3s ease;
 }
@@ -610,7 +607,7 @@ img{
     margin: 0 0.6vh 1.2vh;
     cursor: pointer;
     padding: 0.6vh 1.2vh;
-    border-radius: 30px;
+    border-radius: 3.9vh;
     transition: all 0.3s ease;
     font-size: 3vh;
     color: var(--text-black-600);
@@ -626,17 +623,61 @@ img{
     color: lightslategray;
 }
 
-.about-section .skill-item{
-    display: inline-block;
+.about-section .skills{
+    align-items: center;
+    padding: 5.2vh 0;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 2.5vmin;
+}
+
+.about-section .skills .skill-item{
+    /* display: inline-block; */
+    justify-content: center;
+    align-items: center;
+
     padding: 1em;
-    border-radius: 20%;
+    border-radius: 15%;
     text-align: center;
     margin: 0 0.6vh 1.2vh;
     width: 23vw;
     height: 39vh;
-    font-size: 3vh;
 }
 
+.about-section .skills .skill-item .box{
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: var(--text-black-700);
+}
 
+.about-section .skills:hover .skill-item .box .content h2,p{
+    pointer-events: none;
+}
+
+.about-section .skills:hover .skill-item .box .content h2{
+    color: lightslategray;
+}
+
+.about-section .skills .skill-item .box .content p{
+    font-size: 1.8vmin;
+}
+
+.about-section .skills .skill-item .box .content a{
+    position: relative;
+    display: inline-block;
+    padding: 1vh 2.6vh;
+    margin-top: 2.6vh;
+    border-radius: 2.6vh;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.about-section .skills .skill-item .box .content a:after{
+    border-radius: 2.6vh;
+}
 
 /* about - end */
