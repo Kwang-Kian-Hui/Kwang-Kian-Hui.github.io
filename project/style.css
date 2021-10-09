@@ -437,6 +437,8 @@ img{
 .about-illustration{
     flex: 0 0 40%;
     text-align: center;
+    border-radius: 3.5vh;
+    padding: 1.5vh;
 }
 
 /* ------------------------------------svg animation -------------------------------------*/
@@ -558,12 +560,77 @@ img{
 
 /* ----------------------------------------svg animation - end----------------------------------- */
 
-.about-info{
+.about-section{
+    background-color: whitesmoke;
+}
+
+.about-section .about-info{
     flex: 0 0 60%;
     padding: 1em;
     text-align: justify;
     text-justify: inter-word;
+    font-size: 2.5vh;
+    font-weight: 400;
+    font-family: "Roboto";
+    color: var(--text-black-700);
+}
+
+.about-section .about-info .text-wrapper{
+    display: inline-flex;
+}
+
+.about-section .about-info .static-text{
     font-size: 3vh;
+    color: var(--text-black-700);
+    width: 15vh;
+}
+
+.about-section .about-info .dynamic-texts{
+    position: absolute; 
+    overflow: hidden;
+    height: 4.5vh;
+    line-height: 4.5vh;
+
+    font-size: 3vh;
+    font-weight: 500;
+    padding-left: 15vh;
+    color: lightslategray;
+    font-family: "Permanent Marker";
+    list-style: none;
+}
+
+.about-section .about-info .dynamic-texts li{
+    animation: changingTextSlide 6s steps(3) infinite;
+    position: relative;
+    top: 0;
+}
+
+.about-section .about-info .dynamic-texts li span{
+    position: relative;
+}
+
+.about-section .about-info .dynamic-texts li span:after{
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-left: 0.5vh solid lightslategray;
+    animation: changingText 2s steps(7) infinite, blink 0.5s step-end infinite;
+    background: whitesmoke;
+}
+
+@keyframes changingText{
+    100%{
+        left: 100%;
+        margin: 0 -2.5vh 0 2.5vh
+    }
+}
+
+@keyframes changingTextSlide{
+    100%{
+        top: -13.5vh;
+    }
 }
 
 .about-section .social-links{
@@ -651,6 +718,7 @@ img{
     align-items: center;
     overflow: hidden;
     color: var(--text-black-700);
+    font-family: "Permanent Marker";
 }
 
 .about-section .skills:hover .skill-item .box .content h2,p{
@@ -663,10 +731,10 @@ img{
 
 .about-section .skills .skill-item .box .content p{
     font-size: 1.8vmin;
+    font-family: "Roboto";
 }
 
 .about-section .skills .skill-item .box .content a{
-    position: relative;
     display: inline-block;
     padding: 1vh 2.6vh;
     margin-top: 2.6vh;
