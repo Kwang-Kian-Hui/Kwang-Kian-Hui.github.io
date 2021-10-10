@@ -748,4 +748,117 @@ img{
     border-radius: 2.6vh;
 }
 
+.about-section .experience{
+    padding-bottom: 10.5vh;
+    width: 100%;
+}
+
+.about-section .timeline{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.about-section .timeline:before{
+    content: "";
+    width: 0.7vmin;
+    height: 60vh;
+    left: 50%;
+    background-color: var(--bg-black-100);
+    position: absolute;
+}
+
+.about-section .timeline .timeline-item{
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 0 2vh;
+    height: 30vh;
+}
+
+/* 
+.about-section .timeline:nth-child(odd)::before{
+    content: "";
+    width: 0.7vmin;
+    height: 25vh;
+    left: 50%;
+    background-color: var(--bg-black-100);
+    position: absolute;
+} */
+
+/* .about-section .timeline:nth-child(even)::before{
+    content: "";
+    width: 0.7vmin;
+    height: 25vh;
+    right: 50%;
+    background-color: var(--bg-black-100);
+    position: absolute;
+} */
+
+.about-section .timeline .timeline-item:nth-child(odd){
+    padding-right: calc(50% + 6.5vh);
+    text-align: right;
+}
+
+.about-section .timeline .timeline-item:nth-child(even){
+    padding-left: calc(50% + 6.5vh);
+    text-align: left;
+}
+
+.about-section .timeline .timeline-item-inner{
+    padding: 3.9vh;
+    border-radius: 0.6vh;
+}
+
+.about-section .timeline .timeline-item-inner .icon{
+    height: 6vh;
+    width: 6vh;
+
+    background-color: var(--bg-black-50);
+    color: lightslategray;
+    border: 0.6vh solid var(--bg-black-100);
+    border-radius: 50%;
+    font-size: 2.5vh;
+    text-align: center;
+    line-height: 5.2vh;
+    position: absolute;
+
+}
+
+.about-section .timeline .timeline-item-inner:nth-child(odd) .icon{
+    right: 48.4%;
+}
+
+.about-section .timeline .timeline-item-inner:nth-child(even) .icon{
+    left: 48.4%;
+}
+
+.about-section .timeline .timeline-item-inner span{
+    font-size: 3vh;
+    color: lightslategray;
+    display: block;
+    margin: 0 0 1.3vh;
+    font-weight: 500;
+}
+
+.about-section .timeline .timeline-item-inner h3{
+    font-size: 2.8vh;
+    color: var(--text-black-700);
+    font-weight: 600;
+    margin: 0 0 0.6vh;
+    text-transform: capitalize;
+}
+
+.about-section .timeline .timeline-item-inner h4{
+    font-size: 2.5vh;
+    font-style: italic;
+    color: var(--text-black-600);
+    margin: 0;
+}
+
+.about-section .timeline .timeline-item-inner p{
+    font-size: 2.5vh;
+    color: var(--text-black-600);
+    line-height: 3vh;
+    margin: 2.4vh 0 0;
+}
+
 /* about - end */
