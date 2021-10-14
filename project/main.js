@@ -64,9 +64,7 @@
 })();
 
 (() => {
-    // console.log("hide all sections except for active one")
     const sections = document.querySelectorAll(".section");
-    // console.log(sections);
 
     sections.forEach((section) => {
         if(!section.classList.contains("active")){
@@ -95,4 +93,90 @@
             aboutSection.querySelector(target).classList.add("active");
         }
     })
+})();
+
+function bodyScrollingToggle(){
+    document.body.classList.toggle("stop-scrolling");
+}
+
+// ----- portfolio filter and popup -----
+
+(() => {
+    const filterContainer = document.querySelector(".portfolio-filter"),
+    portfolioItemsContainer = document.querySelector(".portfolio-items"),
+    portfolioItems = document.querySelectorAll(".portfolio-item"),
+    popup = document.querySelector(".portfolio-popup"),
+    prevBtn = popup.querySelector(".popup-prev"),
+    nextBtn = popup.querySelector(".popup-next"),
+    closeBtn = popup.querySelector(".popup-close"),
+    projectDetailsContainer = popup.querySelector(".popup-details"),
+    projectDetailsBtn = popup.querySelector("popup-project-details-btn");
+
+    let itemIndex, slideIndex, screenshots;
+
+    filterContainer.addEventListener("click", (e) => {
+        if(e.target.classList.contains("filter-item") && !e.target.classList.contains("active")){
+            // deactivate existing active "filter-item"
+            filterContainer.querySelector(".active").classList.remove("outer-shadow","active");
+            // activate new "filter-item"
+            e.target.classList.add("active","outer-shadow");
+            const target = e.target.getAttribute("data-target");
+            portfolioItems.forEach((item) => {
+                if(item.getAttribute("data-category") === target || target === "all"){
+                    item.classList.remove("hide");
+                    item.classList.add("show");
+                }else{
+                    item.classList.remove("show");
+                    item.classList.add("hide");
+                }
+            })
+        }
+    })
+
+    portfolioItemsContainer.addEventListener("click", (e) => {
+        if(e.target.closest(".portfolio-item-inner")){
+            const portfolioItem = e.target.closest(".portfolio-item-inner").parentElement;
+            // get portfolioItem's index
+            itemIndex = Array.from(portfolioItem.parentElement.children).indexOf(portfolioItem);
+            screenshots = portfolioItems[itemIndex].querySelector(".portfolio-item-img img").getAttribute("data-screenshots");
+            
+            // convert screenshots into array
+            screenshots = screenshots.split(",");
+            slideIndex = 0;
+            popupToggle();
+            popupSlideshow();
+        }
+    })
+
+    closeBtn.addEventListener("click", () => {
+        popupToggle();
+    })
+
+    function popupToggle() {
+        popup.classList.toggle("open");
+        bodyScrollingToggle();
+    }
+
+    function popupSlideshow(){
+        const imgSrc = screenshots[slideIndex];
+        const popupImg = popup.querySelector(".popup-img");
+        // activate loader until the popupImg is loaded
+        popup.querySelector(".load-progress-indicator").classList.add("active");
+        popupImg.src = imgSrc;
+        popupImg.onload = () => {
+            // deactivate load progress indicator
+            popup.querySelector(".load-progress-indicator").classList.remove("active");
+        }
+        popup.querySelector(".popup-count").innerHTML = (slideIndex + 1) + " of " + screenshots.length;
+    }
+
+    nextBtn.addEventListener("click", () => {
+        if(slideIndex === (screenshots.length - 1)){
+            slideIndex = 0;
+        }else{
+            slideIndex++;
+        }
+        popupSlideshow();
+    })
+    //1:27:50
 })();
