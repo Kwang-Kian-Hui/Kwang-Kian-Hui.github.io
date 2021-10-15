@@ -96,7 +96,7 @@
 })();
 
 function bodyScrollingToggle(){
-    document.body.classList.toggle("stop-scrolling");
+    document.body.classList.toggle("hide-scrolling");
 }
 
 // ----- portfolio filter and popup -----
@@ -110,7 +110,7 @@ function bodyScrollingToggle(){
     nextBtn = popup.querySelector(".popup-next"),
     closeBtn = popup.querySelector(".popup-close"),
     projectDetailsContainer = popup.querySelector(".popup-details"),
-    projectDetailsBtn = popup.querySelector("popup-project-details-btn");
+    projectDetailsBtn = popup.querySelector(".popup-project-details-btn");
 
     let itemIndex, slideIndex, screenshots;
 
@@ -142,14 +142,25 @@ function bodyScrollingToggle(){
             
             // convert screenshots into array
             screenshots = screenshots.split(",");
+            if(screenshots.length === 1){
+                prevBtn.style.display = "none";
+                nextBtn.style.display = "none";
+            }else{
+                prevBtn.style.display = "block";
+                nextBtn.style.display = "block";
+            }
             slideIndex = 0;
             popupToggle();
             popupSlideshow();
+            popupDetails();
         }
     })
 
     closeBtn.addEventListener("click", () => {
         popupToggle();
+        if(projectDetailsContainer.classList.contains("active")){
+            popupDetailsToggle();
+        }
     })
 
     function popupToggle() {
@@ -178,5 +189,42 @@ function bodyScrollingToggle(){
         }
         popupSlideshow();
     })
-    //1:27:50
+    
+    prevBtn.addEventListener("click", () => {
+        if(slideIndex === 0){
+            slideIndex = screenshots.length-1;
+        }else{
+            slideIndex--;
+        }
+        popupSlideshow();
+    })
+
+    function popupDetails(){
+        // if check any of the value is null if projects have empty values
+        const details = portfolioItems[itemIndex].querySelector(".portfolio-item-details").innerHTML;
+        popup.querySelector(".popup-project-details").innerHTML = details;
+        const title = portfolioItems[itemIndex].querySelector(".portfolio-item-title").innerHTML;
+        popup.querySelector(".popup-title h2").innerHTML = title;
+        const category = portfolioItems[itemIndex].getAttribute("data-category");
+        popup.querySelector(".popup-project-category").innerHTML = category;
+    }
+
+    projectDetailsBtn.addEventListener("click", () => {
+        popupDetailsToggle();
+    })
+
+    function popupDetailsToggle(){
+        if(projectDetailsContainer.classList.contains("active")){
+            projectDetailsBtn.querySelector("i").classList.add("fa-plus");
+            projectDetailsBtn.querySelector("i").classList.remove("fa-minus");
+            projectDetailsContainer.classList.remove("active");
+            projectDetailsContainer.style.maxHeight = 0;
+        }else{
+            projectDetailsBtn.querySelector("i").classList.remove("fa-plus");
+            projectDetailsBtn.querySelector("i").classList.add("fa-minus");
+            projectDetailsContainer.classList.add("active");
+            projectDetailsContainer.style.maxHeight = projectDetailsContainer.scrollHeight + "px";
+            popup.scrollTo(0, projectDetailsContainer.offsetTop);
+        }
+    }
 })();

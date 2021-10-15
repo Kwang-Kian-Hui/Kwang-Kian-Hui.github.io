@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page Title</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="main.js" defer></script>
+    <script src="https://kit.fontawesome.com/24f4d0238b.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -617,20 +619,20 @@
             <div class="row">
                 <div class="portfolio-filter">
                     <span class="filter-item outer-shadow active" data-target="all">All</span>
-                    <span class="filter-item" data-target="web">Web</span>
-                    <span class="filter-item" data-target="mobile">Mobile</span>
+                    <span class="filter-item" data-target="Web">Web</span>
+                    <span class="filter-item" data-target="Mobile">Mobile</span>
                     <span class="filter-item" data-target="p5.js">p5.js</span>
-                    <span class="filter-item" data-target="others">Others</span>
+                    <span class="filter-item" data-target="Others">Others</span>
                 </div>
             </div>
             <div class="row portfolio-items">
                 <!-- personal portfolio -->
-                <div class="portfolio-item" data-category="web">
+                <div class="portfolio-item" data-category="Web">
                     <div class="portfolio-item-inner outer-shadow">
                         <div class="portfolio-item-img">
                             <img src="img/portfolio/img-placeholder.png" alt="portfolio" data-screenshots="img/portfolio/portfolio-website/img-1.png,
                                             img/portfolio/portfolio-website/img-2.png,
-                                            img/portfolio/portfolio-website/img-3.png">
+                                            img/portfolio/vs2019.jpg">
                             <span class="view-project">view project</span>
                         </div>
                         <p class="portfolio-item-title">Personal Portfolio</p>
@@ -638,13 +640,13 @@
                         <div class="portfolio-item-details">
                             <div class="row">
                                 <div class="description">
-                                    <h3>Project Brief:</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing
-                                        elit, sed do eiusmod tempor incididunt ut labore et
-                                        dolore magna aliqua. Ut enim ad minim veniam, quis
-                                        nostrud exercitation ullamco laboris nisi ut aliquip ex
-                                        ea commodo consequat. Duis aute irure dolor
-                                        in reprehenderit in voluptate velit esse
+                                    <h3>Project Description:</h3>
+                                    <p>
+                                        A personal portfolio website completed with the help of some online tutorial guides. Includes SVG +
+                                        CSS animation. Javascript for state management and navigation.
+                                    </p>
+                                    <p>
+                                        Improvements: Responsiveness
                                     </p>
                                 </div>
                                 <div class="info">
@@ -661,7 +663,7 @@
                     </div>
                 </div>
                 <!-- location alarm -->
-                <div class="portfolio-item" data-category="mobile">
+                <div class="portfolio-item" data-category="Mobile">
                     <div class="portfolio-item-inner outer-shadow">
                         <div class="portfolio-item-img">
                             <img src="img/portfolio/img-placeholder.png" alt="portfolio" data-screenshots="img/portfolio/portfolio-website/img-1.png,
@@ -674,22 +676,28 @@
                         <div class="portfolio-item-details">
                             <div class="row">
                                 <div class="description">
-                                    <h3>Project Brief:</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing
-                                        elit, sed do eiusmod tempor incididunt ut labore et
-                                        dolore magna aliqua. Ut enim ad minim veniam, quis
-                                        nostrud exercitation ullamco laboris nisi ut aliquip ex
-                                        ea commodo consequat. Duis aute irure dolor
-                                        in reprehenderit in voluptate velit esse
+                                    <h3>Project Description:</h3>
+                                    <p>
+                                        Location Alarm is an app that allow users to create an alarm with a set destination and radius, and when
+                                        their devices are within the radius of their destination, the alarm will ring. This app uses the Map and 
+                                        Places API of Google Cloud Platform for the map features and address suggestions when users are searching
+                                        for their destination. Some android devices are unable to receive background location updates due to the
+                                        device's battery saving processes.
+                                    </p>
+                                    <p>
+                                        Key Takeaways: (1) Usage of Google Map and Places APIs, (2) Publishing app to Google Play Store for internal
+                                        testing, and releasing for public use. (3) Background location packages' limitations as the feature only
+                                        works for certain android devices and a better solution is required. 
                                     </p>
                                 </div>
                                 <div class="info">
                                     <h3>Project info</h3>
                                     <ul>
-                                        <li>Date - <span>2020</span></li>
-                                        <li>Client - <span>xyz</span></li>
-                                        <li>Tools - <span>Flutter(Dart), MySQL</span></li>
-                                        <li>Web - <span><a
+                                        <li>Date - <span>2021</span></li>
+                                        <li>Tools - <span>Flutter(Dart), SQLite</span></li>
+                                        <li>Github - <span><a
+                                            href="https://github.com/Kwang-Kian-Hui?tab=repositories">location-alarm_v2</a></span>
+                                        <li>Google Play Link - <span><a
                                                     href="https://play.google.com/store/apps/details?id=com.location_alarm">https://play.google.com/store/apps/details?id=com.location_alarm</a></span>
                                         </li>
                                     </ul>
@@ -699,7 +707,7 @@
                     </div>
                 </div>
                 <!-- deall ASP school assignment -->
-                <div class="portfolio-item" data-category="mobile">
+                <div class="portfolio-item" data-category="Mobile">
                     <div class="portfolio-item-inner outer-shadow">
                         <div class="portfolio-item-img">
                             <img src="img/portfolio/img-placeholder.png" alt="portfolio" data-screenshots="img/portfolio/portfolio-website/img-1.png,
@@ -769,7 +777,7 @@
                     </div>
                 </div>
                 <!-- c++ school assignment -->
-                <div class="portfolio-item" data-category="others">
+                <div class="portfolio-item" data-category="Others">
                     <div class="portfolio-item-inner outer-shadow">
                         <div class="portfolio-item-img">
                             <img src="img/portfolio/img-placeholder.png" alt="portfolio" data-screenshots="img/portfolio/portfolio-website/img-1.png,
@@ -804,7 +812,7 @@
                     </div>
                 </div>
                 <!-- c++ school assignment -->
-                <div class="portfolio-item" data-category="others">
+                <div class="portfolio-item" data-category="Others">
                     <div class="portfolio-item-inner outer-shadow">
                         <div class="portfolio-item-img">
                             <img src="img/portfolio/img-placeholder.png" alt="portfolio" data-screenshots="img/portfolio/portfolio-website/img-1.png,
@@ -839,7 +847,7 @@
                     </div>
                 </div>
                 <!-- python school assignment -->
-                <div class="portfolio-item" data-category="others">
+                <div class="portfolio-item" data-category="Others">
                     <div class="portfolio-item-inner outer-shadow">
                         <div class="portfolio-item-img">
                             <img src="img/portfolio/img-placeholder.png" alt="portfolio" data-screenshots="img/portfolio/portfolio-website/img-1.png,
@@ -853,12 +861,7 @@
                             <div class="row">
                                 <div class="description">
                                     <h3>Project Brief:</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing
-                                        elit, sed do eiusmod tempor incididunt ut labore et
-                                        dolore magna aliqua. Ut enim ad minim veniam, quis
-                                        nostrud exercitation ullamco laboris nisi ut aliquip ex
-                                        ea commodo consequat. Duis aute irure dolor
-                                        in reprehenderit in voluptate velit esse
+                                    <p>test to see if it works
                                     </p>
                                 </div>
                                 <div class="info">
@@ -874,12 +877,10 @@
                     </div>
                 </div>
                 <!-- python school assignment -->
-                <div class="portfolio-item" data-category="others">
+                <div class="portfolio-item" data-category="Others">
                     <div class="portfolio-item-inner outer-shadow">
                         <div class="portfolio-item-img">
-                            <img src="img/portfolio/img-placeholder.png" alt="portfolio" data-screenshots="img/portfolio/portfolio-website/img-1.png,
-                                            img/portfolio/portfolio-website/img-2.png,
-                                            img/portfolio/portfolio-website/img-3.png">
+                            <img src="img/portfolio/img-placeholder.png" alt="portfolio" data-screenshots="img/portfolio/portfolio-website/img-1.png">
                             <span class="view-project">view project</span>
                         </div>
                         <p class="portfolio-item-title">Data Programming Research(python)</p>
@@ -962,9 +963,6 @@
             </div>
         </div>
     </section>
-
-    <script src="main.js"></script>
-    <script src="https://kit.fontawesome.com/24f4d0238b.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
