@@ -43,6 +43,8 @@
                 navMenu.querySelector(".active").classList.add("outer-shadow","hover-in-shadow");
                 navMenu.querySelector(".active").classList.remove("active","inner-shadow");
 
+                window.scrollTo(top);
+
                 // only if navigation is performed on the menu
                 if(navMenu.classList.contains("open")){
                     event.target.classList.add("active","inner-shadow");
@@ -57,6 +59,35 @@
                         }
                     })
                     fadeOutEffect();
+                }
+
+                if(event.target.classList.contains("portfolio-link")){
+                    const filterContainer = document.querySelectorAll(".filter-item");
+                    const target = event.target.getAttribute("data-target");
+                    // All Web Mobile p5.js Others
+                    console.log(filterContainer);
+                    
+                    filterContainer.forEach((filterItem) => {
+                        if(filterItem.classList.contains("active")){
+                            filterItem.classList.remove("outer-shadow","active");
+                        }
+                        const fItem = filterItem.getAttribute("data-target");
+                        if(target === fItem){
+                            filterItem.classList.add("active","outer-shadow");
+                        }
+                        portfolioItems = document.querySelectorAll(".portfolio-item");
+                        portfolioItems.forEach((pItem) => {
+                            if(pItem.getAttribute("data-category") === target){
+                                pItem.classList.remove("hide");
+                                pItem.classList.add("show");
+                            }else{
+                                pItem.classList.remove("show");
+                                pItem.classList.add("hide");
+                            }
+                        })
+                    })
+
+                    
                 }
             }
         }
@@ -122,7 +153,7 @@ function bodyScrollingToggle(){
             e.target.classList.add("active","outer-shadow");
             const target = e.target.getAttribute("data-target");
             portfolioItems.forEach((item) => {
-                if(item.getAttribute("data-category") === target || target === "all"){
+                if(item.getAttribute("data-category") === target || target === "All"){
                     item.classList.remove("hide");
                     item.classList.add("show");
                 }else{

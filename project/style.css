@@ -790,7 +790,7 @@ img{
 .about-section .timeline:before{
     content: "";
     width: 0.7vmin;
-    height: 60vh;
+    height: 30vh;
     left: 50%;
     background-color: var(--bg-black-100);
     position: absolute;
@@ -899,6 +899,14 @@ img{
     margin: 2.4vh 0 0;
 }
 
+.about-section .timeline .timeline-item-inner .span-item{
+    font-size: 2.5vh;
+    color: var(--text-black-600);
+    line-height: 3vh;
+    margin: 2.4vh 0 0;
+    font-weight: 400;
+}
+
 .about-section .education{
     padding-bottom: 10.5vh;
     width: 100%;
@@ -968,7 +976,7 @@ img{
 }
 
 .portfolio-section .portfolio-item.show{
-    display: block;
+    display: flex;
     animation: fadeInTop 0.5s ease;
 }
 
