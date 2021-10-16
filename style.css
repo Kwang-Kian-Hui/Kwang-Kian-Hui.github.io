@@ -1480,14 +1480,14 @@ img{
 .portfolio-section .portfolio-popup .info ul li{
     display: block;
     margin-bottom: 1vw;
-    font-size: 2vw;
+    font-size: 1.6vw;
     font-weight: 600;
     color: var(--text-black-600);
 }
 
 .portfolio-section .portfolio-popup .info ul a{
     color: lightslategray;
-    font-size: 1.6vw;
+    font-size: 1.3vw;
 }
 
 .portfolio-section .portfolio-popup .info ul li span{
