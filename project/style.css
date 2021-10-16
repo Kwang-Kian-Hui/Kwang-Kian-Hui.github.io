@@ -584,6 +584,17 @@ img{
     color: var(--text-black-700);
 }
 
+.about-section .about-img{
+    flex: 0 0 30%;
+    padding: 0;
+}
+
+.about-section .about-img img{
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+}
+
 .about-section .about-info .text-wrapper{
     display: inline-flex;
 }
