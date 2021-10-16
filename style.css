@@ -328,8 +328,8 @@ img{
 
 .nav-menu ul li a{
     display: inline-block;
-    width: 15vw;
-    font-size: 5vh;
+    width: 100%;
+    font-size: 30px;
     font-weight: 600;
     color: var(--text-black-700);
     padding: 0.6vh 2vw;
@@ -339,6 +339,13 @@ img{
 
     text-align: justify;
     text-justify: inter-word;
+}
+
+@media only screen and (max-width: 500px){
+    .nav-menu ul li a{
+        width: 100%;
+        font-size: 24px;
+    }
 }
 
 .nav-menu ul li a.active{
@@ -357,7 +364,7 @@ img{
 }
 
 .home-section .full-screen{
-    padding-left: 50px ;
+    padding-left: 4vw;
     min-height: 100vh;
 }
 
@@ -370,7 +377,7 @@ img{
 }
 
 .home-section .home-text h1{
-    font-size: 6vh;
+    font-size: 2.5vw;
     max-zoom: 2.0;
     font-weight: 700;
     color: var(--text-black-900);
@@ -378,19 +385,38 @@ img{
 }
 
 .typing-effect{
-    width: 63vh;
+    width: 45vw;
     animation: typingEffect 3s steps(32), blink 0.5s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
-
-    /* display: inline-block; */
-    font-size: 4vh;
+    
+    font-size: 2.9vw;
     font-weight: 500;
     color: var(--text-black-700);
     text-transform: capitalize;
     margin: 0;
 
     border-right: 0.5vh solid;
+}
+
+.home-section .home-text .btn-1{
+    margin-top: 30px;
+    font-size: 2.5vw;
+    width: 21vw;
+    text-align: center;
+}
+
+.home-section .home-img .img-box img{
+    width: 100%;
+    border-radius: 50%;
+    border: 10px solid transparent;
+}
+
+.home-illustration{
+    flex: 0 0 40%;
+    text-align: center;
+    border-radius: 10.5vh;
+    padding: 2.5vh;
 }
 
 @keyframes typingEffect{
@@ -405,40 +431,52 @@ img{
     }
 }
 
-.home-section .home-text .btn-1{
-    margin-top: 30px;
-    font-size: 3vh;
-    min-zoom: 0.3;
-    width: 11vw;
-    max-width: 400px;
-    min-width: 150px;
-    text-align: center;
-}
+@media only screen and (max-width: 500px){
+    .home-section .home-text,
+    .home-section .home-illustration{
+        flex: 0 0 80%;
+        max-width: 80%;
+        text-align: center;
+        justify-content: center;
+        margin: auto;
+        padding: 0;
+    }
 
-.about-section .about-img .img-box{
-    height: 50vh;
-    width: 50vh;
-    /* max-width: 450px;
-    min-width: 250px;
-    max-height: 450px;
-    min-height: 250px; */
-    display: block;
-    margin-left: 5vh;
-    border-radius: 50%;
-    padding: 15px;
-}
+    .home-section .home-text h1{
+        font-size: 4vw;
+        padding: auto;
+        font-weight: 700;
+        color: var(--text-black-900);
+        text-align: center;
+    }
 
-.home-section .home-img .img-box img{
-    width: 100%;
-    border-radius: 50%;
-    border: 10px solid transparent;
-}
+    .typing-effect{
+        width: 80vw;
+        animation: typingEffect 3s steps(32), blink 0.5s step-end infinite alternate;
+        white-space: nowrap;
+        overflow: hidden;
+    
+        font-size: 5vw;
+        font-weight: 500;
+        color: var(--text-black-700);
+        text-align: center;
+        text-transform: capitalize;
+    
+        border-right: 0.5vh solid;
+    }
 
-.home-illustration{
-    flex: 0 0 40%;
-    text-align: center;
-    border-radius: 10.5vh;
-    padding: 2.5vh;
+    .home-section .home-text .btn-1{
+        margin-top: 20px;
+        font-size: 4vw;
+        width: 50vw;
+        text-align: center;
+    }
+    
+    .home-illustration{
+        text-align: center;
+        border-radius: 10.5vw;
+        padding: 2.5vw;
+    }
 }
 
 /* ------------------------------------svg animation -------------------------------------*/
@@ -593,6 +631,19 @@ img{
     border-radius: 50%;
     height: 100%;
     width: 100%;
+}
+
+.about-section .about-img .img-box{
+    height: 50vh;
+    width: 50vh;
+    /* max-width: 450px;
+    min-width: 250px;
+    max-height: 450px;
+    min-height: 250px; */
+    display: block;
+    margin-left: 5vh;
+    border-radius: 50%;
+    padding: 15px;
 }
 
 .about-section .about-info .text-wrapper{
