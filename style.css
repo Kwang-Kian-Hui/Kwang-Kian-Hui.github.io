@@ -930,7 +930,7 @@ img{
 }
 
 .about-section .skills .skill-item .box .content h2{
-    font-size: 2.5vw;
+    font-size: 1.7vw;
 }
 
 .about-section .skills .skill-item .box .content a{
@@ -941,7 +941,7 @@ img{
     text-decoration: none;
     font-weight: 500;
     transition: all 0.3s ease;
-    font-size: 1.3vw;
+    font-size: 1.2vw;
 }
 
 .about-section .skills .skill-item .box .content a:after{
@@ -1432,14 +1432,14 @@ img{
 }
 
 .portfolio-section .portfolio-popup .popup-title h2{
-    font-size: 3.5vh;
+    font-size: 2vw;
     color: var(--text-black-900);
     font-weight: 600;
     margin: 0 0 0.5vh;
 }
 
 .portfolio-section .portfolio-popup .popup-title p{
-    font-size: 2.3vh;
+    font-size: 1.5vw;
     font-weight: 600;
     color: var(--text-black-600);
     margin: 0 0 1.5vh;
@@ -1452,7 +1452,7 @@ img{
 }
 
 .portfolio-section .portfolio-popup .popup-project-details h3{
-    font-size: 2.8vh;
+    font-size: 2vw;
     font-weight: 600;
     color: var(--text-black-700);
     margin: 0 0 2vh;
@@ -1465,7 +1465,7 @@ img{
 }
 
 .portfolio-section .portfolio-popup .description p{
-    font-size: 2.5vh;
+    font-size: 1.2vw;
     color: var(--text-black-600);
     line-height: 4vh;
     margin: 0;
@@ -1480,7 +1480,7 @@ img{
 .portfolio-section .portfolio-popup .info ul li{
     display: block;
     margin-bottom: 1vw;
-    font-size: 1.6vw;
+    font-size: 1.3vw;
     font-weight: 600;
     color: var(--text-black-600);
 }
@@ -1558,17 +1558,22 @@ img{
         line-height: 3.5vw;
         margin: 0;
     }
+
+    .portfolio-section .portfolio-popup .info ul li{
+        display: block;
+        margin-bottom: 1vw;
+        font-size: 2vw;
+        font-weight: 600;
+        color: var(--text-black-600);
+    }
+    
+    .portfolio-section .portfolio-popup .info ul a{
+        color: lightslategray;
+        font-size: 2vw;
+    }
 }
 
 @media only screen and (max-width: 530px){
-    .portfolio-section .portfolio-item{
-        flex: 0 0 100%;
-        max-width: 100%;
-        padding: 1.5vw;
-        display: flex;
-        flex-wrap: wrap;
-    }
-
     .portfolio-section .portfolio-item-inner p{
         font-size: 3vw;
     }
@@ -1609,6 +1614,19 @@ img{
         line-height: 4vw;
         margin: 0;
     }
+
+    .portfolio-section .portfolio-popup .info ul li{
+        display: block;
+        margin-bottom: 1vw;
+        font-size: 2.5vw;
+        font-weight: 600;
+        color: var(--text-black-600);
+    }
+    
+    .portfolio-section .portfolio-popup .info ul a{
+        color: lightslategray;
+        font-size: 2.5vw;
+    }
 } 
 /* end media query max-width 530px */
 
@@ -1631,6 +1649,11 @@ img{
         color: lightslategray;
         font-size: 2vw;
     }
+}
+
+.portfolio-section .portfolio-popup .empty-space{
+    width: 100%;
+    height: 2px;
 }
 
 .portfolio-section .portfolio-popup .separator{
