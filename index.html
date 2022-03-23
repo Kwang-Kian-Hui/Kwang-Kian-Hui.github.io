@@ -501,7 +501,7 @@
                             <div class="content">
                                 <h2>PYTHON</h2>
                                 <p>
-                                    Webscraping, data analysis, audio processing, Django and RESTful APIs.
+                                    OpenCV, audio processing, Django RESTful APIs, and more.
                                 </p>
                                 <a href="#portfolio" data-target="Others" class="link-item portfolio-link outer-shadow hover-in-shadow">View Projects</a>
                             </div>
@@ -606,7 +606,7 @@
                                         <h3>Bachelor of Science (Honours) in Computer Science - Goldsmith, University of
                                             London(UOL)</h3>
                                         <h4>Singapore Institute of Management(SIM), Singapore</h4>
-                                        <span class="span-item">Module assignment projects can be found in the <a href="#portfolio" class="link-item">portfolio</a> section</span>
+                                        <span class="span-item">Module courseworks can be found in the <a href="#portfolio" class="link-item">portfolio</a> section</span>
                                     </div>
                                 </div>
                             </div>
@@ -629,11 +629,222 @@
                     <span class="filter-item outer-shadow active" data-target="All">All</span>
                     <span class="filter-item" data-target="Web">Web</span>
                     <span class="filter-item" data-target="Mobile">Mobile</span>
+                    <span class="filter-item" data-target="Web">Python</span>
                     <span class="filter-item" data-target="p5.js">p5.js</span>
                     <span class="filter-item" data-target="Others">Others</span>
                 </div>
             </div>
             <div class="row portfolio-items">
+                <!-- Traffic Monitoring System (OpenCV) -->
+                <div class="portfolio-item" data-category="Python">
+                    <div class="portfolio-item-inner outer-shadow">
+                        <div class="portfolio-item-img">
+                            
+                            <img src="img\portfolio\traffic-monitoring-system/traffic monitoring system img 1.png" alt="portfolio"
+                                data-screenshots="img\portfolio\traffic-monitoring-system/traffic monitoring system img 1.png,
+                                        img\portfolio\traffic-monitoring-system/traffic monitoring system img 2.png">
+                            <span class="view-project">view project</span>
+                        </div>
+                        <p class="portfolio-item-title">Traffic Monitoring System (OpenCV)</p>
+
+                        <div class="portfolio-item-details">
+                            <div class="row">
+                                <div class="description">
+                                    <h3>Project Description:</h3>
+                                    <p>
+                                        The application must run on a Jupyter notebook written in Python and use the OpenCV library.
+                                        Technically, the algorithm of the application must be based on the frame differencing and 
+                                        background subtraction techniques.
+                                    </p>
+                                    <h4>Tasks:</h4>
+                                    <p>
+                                        (1) develop an application for detecting and tracking moving cars from a camera recording.
+                                    </p>
+                                    <p>
+                                        (2) count the number of cars to the city center(towards left of the junction based on camera recording).
+                                    </p>
+                                    <h3>Features Achieved</h3>
+                                    <p>
+                                        Object detection achieved using background subtraction. Differentiating pedestrians, cyclists and vehicles using contour area.
+                                    </p>
+                                    <p>
+                                        Object tracking achieved using centroid of contour area. Euclidean distance between centroids of current and previous frame calculated
+                                        and used to decide if they are the same vehicle. 
+                                    </p>
+                                    <p>
+                                        When a vehicle exits the frame, its centroid from previous frame will not be close enough
+                                        to any of the centroids in current frame, this is how we decide if a vehicle has exited the screen. If the positional x value of an exiting
+                                        centroid is below 215 pixels (about 1/4 of the screen), we will count it as one car going towards the city center.
+                                    </p>
+                                    <p>
+                                        Vertically overlapping vehicles would have their contours combined and detected as one object. Thus, I split any detected object into 2 separate
+                                        objects if their height is greater than 130 and area greater than 13500. This allow us to track them as 2 separate vehicles.
+                                    </p>
+                                    <p>
+                                        Stopped vehicles are still detected based on the difference of the background frame and the current frame (excluding the first 2 stopped vehicles).
+                                    </p>
+                                    <h3>Future Improvements</h3>
+                                    <p>
+                                        1) Vehicle direction can be determined by calculating previous and current frame's positional x value and subtracting them to determine 
+                                        the direction. If current frame x - previous frame x is negative, it can be said that the vehicle is going towards the city center.
+                                    </p>
+                                    <p>
+                                        2) Improve algorithm to detecting separate objects which are too close to each other.
+                                    </p>
+                                    <p>
+                                        3) Background subtractor fails to detect the first 2 vehicles once they have stopped at the junction due to the learning rate of the background subtractor.
+                                        Parameters should be optimised for them to be detected.
+                                    </p>
+                                </div>
+                                <div class="info">
+                                    <h3>Project info:</h3>
+                                    <ul>
+                                        <li>Date - <span>Mar 2022</span></li>
+                                        <li>Module - <span>Intelligent Signal Processing</span></li>
+                                        <li>Project Type - <span>School(Individual)</span></li>
+                                        <li>Libraries - <span>cv2, math</span></li>
+                                        <li>Github - <span><a href="https://-/">https://to-be-uploaded</a></span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ffprobe, ffmpeg video format converter -->
+                <div class="portfolio-item" data-category="Python">
+                    <div class="portfolio-item-inner outer-shadow">
+                        <div class="portfolio-item-img">
+                            <img src="img\portfolio\ffprobe-ffmpeg-converter/converter img 1.png" alt="portfolio"
+                                data-screenshots="img\portfolio\ffprobe-ffmpeg-converter/converter format.png,
+                                        img\portfolio\ffprobe-ffmpeg-converter/converter img 1.png,
+                                        img\portfolio\ffprobe-ffmpeg-converter/converter img 2.png">
+                            <span class="view-project">view project</span>
+                        </div>
+                        <p class="portfolio-item-title">ffprobe, ffmpeg Video Format Converter</p>
+
+                        <div class="portfolio-item-details">
+                            <div class="row">
+                                <div class="description">
+                                    <h3>Project Description:</h3>
+                                    <p>
+                                        The Narbonne Online Film Festival receives every year more than one hundred films in digital format. The problem is that 
+                                        some of these films are not submitted in the format specified by the festival organisation, and they must be converted.
+                                        The organisation wants to automate this process by developing an application (exercise 3) for examining the format of the
+                                        films and, if necessary, convert them.
+                                    </p>
+                                    <h3>Tasks:</h3>
+                                    <p>
+                                        (1) The application must run on a Jupyter notebook written in Python, use ffprobe to examine the files, and ffmpeg to convert the films.
+                                    </p>
+                                    <p>
+                                        (2) From a series of video files, the application should generate a brief report in TXT indicating which films do not respect the 
+                                        digital format specified by the festival and what are the "problematic" fields.
+                                    </p>
+                                    <p>
+                                        (3) The application should automatically convert the submitted films with an incorrect format. The program will create a new copy of the 
+                                        films by adding "_formatOK" at the end of the name.
+                                    </p>
+                                    <p>
+                                        Specified format shown in first screenshot.
+                                    </p>
+                                    <h3>Features Achieved</h3>
+                                    <p>
+                                        (1) ffprobe used to examine video formats and txt file report generated correctly, indicating all problematic fields for each specific files.
+                                    </p>
+                                    <p>
+                                        (2) ffmpeg used to convert format of file into the specified format.
+                                    </p>
+                                </div>
+                                <div class="info">
+                                    <h3>Project info:</h3>
+                                    <ul>
+                                        <li>Date - <span>Mar 2022</span></li>
+                                        <li>Module - <span>Intelligent Signal Processing</span></li>
+                                        <li>Project Type - <span>School(Individual)</span></li>
+                                        <li>Libraries - <span>ffprobe, ffmpeg, pathlib</span></li>
+                                        <li>Github - <span><a href="https://-/">https://to-be-uploaded</a></span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row portfolio-items">
+                    <!-- Mozilla DeepSpeech -->
+                    <div class="portfolio-item" data-category="Python">
+                        <div class="portfolio-item-inner outer-shadow">
+                            <div class="portfolio-item-img">
+                                
+                                <img src="img\portfolio\traffic-monitoring-system/traffic monitoring system img 1.png" alt="portfolio"
+                                    data-screenshots="img\portfolio\traffic-monitoring-system/traffic monitoring system img 1.png,
+                                            img\portfolio\traffic-monitoring-system/traffic monitoring system img 2.png">
+                                <span class="view-project">view project</span>
+                            </div>
+                            <p class="portfolio-item-title">Speech Recognition System (Mozilla DeepSpeech)</p>
+    
+                            <div class="portfolio-item-details">
+                                <div class="row">
+                                    <div class="description">
+                                        <h3>Project Description:</h3>
+                                        <p>
+                                            The application must run on a Jupyter notebook written in Python and use the OpenCV library.
+                                            Technically, the algorithm of the application must be based on the frame differencing and 
+                                            background subtraction techniques.
+                                        </p>
+                                        <h4>Tasks:</h4>
+                                        <p>
+                                            (1) develop an application for detecting and tracking moving cars from a camera recording.
+                                        </p>
+                                        <p>
+                                            (2) count the number of cars to the city center(towards left of the junction based on camera recording).
+                                        </p>
+                                        <h3>Features Achieved</h3>
+                                        <p>
+                                            Object detection achieved using background subtraction. Differentiating pedestrians, cyclists and vehicles using contour area.
+                                        </p>
+                                        <p>
+                                            Object tracking achieved using centroid of contour area. Euclidean distance between centroids of current and previous frame calculated
+                                            and used to decide if they are the same vehicle. 
+                                        </p>
+                                        <p>
+                                            When a vehicle exits the frame, its centroid from previous frame will not be close enough
+                                            to any of the centroids in current frame, this is how we decide if a vehicle has exited the screen. If the positional x value of an exiting
+                                            centroid is below 215 pixels (about 1/4 of the screen), we will count it as one car going towards the city center.
+                                        </p>
+                                        <p>
+                                            Vertically overlapping vehicles would have their contours combined and detected as one object. Thus, I split any detected object into 2 separate
+                                            objects if their height is greater than 130 and area greater than 13500. This allow us to track them as 2 separate vehicles.
+                                        </p>
+                                        <p>
+                                            Stopped vehicles are still detected based on the difference of the background frame and the current frame (excluding the first 2 stopped vehicles).
+                                        </p>
+                                        <h3>Future Improvements</h3>
+                                        <p>
+                                            1) Vehicle direction can be determined by calculating previous and current frame's positional x value and subtracting them to determine 
+                                            the direction. If current frame x - previous frame x is negative, it can be said that the vehicle is going towards the city center.
+                                        </p>
+                                        <p>
+                                            2) Improve algorithm to detecting separate objects which are too close to each other.
+                                        </p>
+                                        <p>
+                                            3) Background subtractor fails to detect the first 2 vehicles once they have stopped at the junction due to the learning rate of the background subtractor.
+                                            Parameters should be optimised for them to be detected.
+                                        </p>
+                                    </div>
+                                    <div class="info">
+                                        <h3>Project info:</h3>
+                                        <ul>
+                                            <li>Date - <span>Dec 2021</span></li>
+                                            <li>Module - <span>Intelligent Signal Processing</span></li>
+                                            <li>Project Type - <span>School(Individual)</span></li>
+                                            <li>Libraries - <span></span></li>
+                                            <li>Github - <span><a href="https://-/">https://to-be-uploaded</a></span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 <!-- personal portfolio -->
                 <div class="portfolio-item" data-category="Web">
                     <div class="portfolio-item-inner outer-shadow">
@@ -660,9 +871,8 @@
                                 <div class="info">
                                     <h3>Project info:</h3>
                                     <ul>
-                                        <li>Date - <span>2020</span></li>
-                                        <li>Client - <span>xyz</span></li>
-                                        <li>Tools - <span>html, css, javascript</span></li>
+                                        <li>Date - <span>2021</span></li>
+                                        <li>Tools - <span>HTML, CSS, JavaScript</span></li>
                                         <li>Web - <span><a href="https://kwang-kian-hui.github.io/portfolio-website/">https://kwang-kian-hui.github.io/portfolio-website/</a></span></li>
                                     </ul>
                                 </div>
