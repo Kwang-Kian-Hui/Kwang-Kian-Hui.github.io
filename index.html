@@ -503,7 +503,7 @@
                                 <p>
                                     OpenCV, audio processing, Django RESTful APIs, and more.
                                 </p>
-                                <a href="#portfolio" data-target="Others" class="link-item portfolio-link outer-shadow hover-in-shadow">View Projects</a>
+                                <a href="#portfolio" data-target="Python" class="link-item portfolio-link outer-shadow hover-in-shadow">View Projects</a>
                             </div>
                         </div>
                     </div>
@@ -532,7 +532,7 @@
                                         <h3>IT Support Intern</h3>
                                         <h4>Abundant Accounting Pte Ltd, Singapore</h4>
                                         <p>
-                                            Developed excel spreadsheets to store company’s records using Excel VBA & Macros as 
+                                            Developed excel spreadsheets to store company's records using Excel VBA & Macros as 
                                             they were stored in multiple individual files, and to aid them in generating and 
                                             editing the Annual General Meeting(AGM) forms, improving work efficiency as they were 
                                             edited in word document manually previously. Conducted staff trainings to familiarise 
@@ -569,8 +569,7 @@
                                             Some modules taken include "Fundamentals of Programming", "Object-Oriented
                                             Programming",
                                             "Databases", "Developing Web Applications", "Predictive Analytics",
-                                            "Spreadsheet
-                                            Engineering".
+                                            "Spreadsheet Engineering".
                                         </p>
                                         <p>
                                             Programming languages used in modules: Java, C++, R
@@ -629,7 +628,7 @@
                     <span class="filter-item outer-shadow active" data-target="All">All</span>
                     <span class="filter-item" data-target="Web">Web</span>
                     <span class="filter-item" data-target="Mobile">Mobile</span>
-                    <span class="filter-item" data-target="Web">Python</span>
+                    <span class="filter-item" data-target="Python">Python</span>
                     <span class="filter-item" data-target="p5.js">p5.js</span>
                     <span class="filter-item" data-target="Others">Others</span>
                 </div>
@@ -639,10 +638,9 @@
                 <div class="portfolio-item" data-category="Python">
                     <div class="portfolio-item-inner outer-shadow">
                         <div class="portfolio-item-img">
-                            
-                            <img src="img\portfolio\traffic-monitoring-system/traffic monitoring system img 1.png" alt="portfolio"
-                                data-screenshots="img\portfolio\traffic-monitoring-system/traffic monitoring system img 1.png,
-                                        img\portfolio\traffic-monitoring-system/traffic monitoring system img 2.png">
+                            <img src="img\portfolio\traffic-monitoring-system\traffic monitoring system img 1.png" alt="portfolio"
+                                data-screenshots="img\portfolio\traffic-monitoring-system\traffic monitoring system img 1.png,
+                                        img\portfolio\traffic-monitoring-system\traffic monitoring system img 2.png">
                             <span class="view-project">view project</span>
                         </div>
                         <p class="portfolio-item-title">Traffic Monitoring System (OpenCV)</p>
@@ -656,43 +654,43 @@
                                         Technically, the algorithm of the application must be based on the frame differencing and 
                                         background subtraction techniques.
                                     </p>
-                                    <h4>Tasks:</h4>
+                                    <h3>Tasks:</h3>
                                     <p>
                                         (1) develop an application for detecting and tracking moving cars from a camera recording.
                                     </p>
                                     <p>
                                         (2) count the number of cars to the city center(towards left of the junction based on camera recording).
                                     </p>
-                                    <h3>Features Achieved</h3>
+                                    <h3>Features Completed</h3>
                                     <p>
-                                        Object detection achieved using background subtraction. Differentiating pedestrians, cyclists and vehicles using contour area.
+                                        (1) Object detection achieved using background subtraction. Differentiating pedestrians, cyclists and vehicles using contour area.
                                     </p>
                                     <p>
-                                        Object tracking achieved using centroid of contour area. Euclidean distance between centroids of current and previous frame calculated
+                                        (2) Object tracking achieved using centroid of contour area. Euclidean distance between centroids of current and previous frame calculated
                                         and used to decide if they are the same vehicle. 
                                     </p>
                                     <p>
-                                        When a vehicle exits the frame, its centroid from previous frame will not be close enough
+                                        (3) When a vehicle exits the frame, its centroid from previous frame will not be close enough
                                         to any of the centroids in current frame, this is how we decide if a vehicle has exited the screen. If the positional x value of an exiting
                                         centroid is below 215 pixels (about 1/4 of the screen), we will count it as one car going towards the city center.
                                     </p>
                                     <p>
-                                        Vertically overlapping vehicles would have their contours combined and detected as one object. Thus, I split any detected object into 2 separate
+                                        (4) Vertically overlapping vehicles would have their contours combined and detected as one object. Thus, I split any detected object into 2 separate
                                         objects if their height is greater than 130 and area greater than 13500. This allow us to track them as 2 separate vehicles.
                                     </p>
                                     <p>
-                                        Stopped vehicles are still detected based on the difference of the background frame and the current frame (excluding the first 2 stopped vehicles).
+                                        (5) Stopped vehicles are still detected based on the difference of the background frame and the current frame (excluding the first 2 stopped vehicles).
                                     </p>
                                     <h3>Future Improvements</h3>
                                     <p>
-                                        1) Vehicle direction can be determined by calculating previous and current frame's positional x value and subtracting them to determine 
+                                        (1) Vehicle direction can be determined by calculating previous and current frame's positional x value and subtracting them to determine 
                                         the direction. If current frame x - previous frame x is negative, it can be said that the vehicle is going towards the city center.
                                     </p>
                                     <p>
-                                        2) Improve algorithm to detecting separate objects which are too close to each other.
+                                        (2) Improve algorithm to detecting separate objects which are too close to each other.
                                     </p>
                                     <p>
-                                        3) Background subtractor fails to detect the first 2 vehicles once they have stopped at the junction due to the learning rate of the background subtractor.
+                                        (3) Background subtractor fails to detect the first 2 vehicles once they have stopped at the junction due to the learning rate of the background subtractor.
                                         Parameters should be optimised for them to be detected.
                                     </p>
                                 </div>
@@ -703,7 +701,7 @@
                                         <li>Module - <span>Intelligent Signal Processing</span></li>
                                         <li>Project Type - <span>School(Individual)</span></li>
                                         <li>Libraries - <span>cv2, math</span></li>
-                                        <li>Github - <span><a href="https://-/">https://to-be-uploaded</a></span></li>
+                                        <li>Github - <span><a href="https://-/">Uploaded after submission deadline</a></span></li>
                                     </ul>
                                 </div>
                             </div>
@@ -714,10 +712,10 @@
                 <div class="portfolio-item" data-category="Python">
                     <div class="portfolio-item-inner outer-shadow">
                         <div class="portfolio-item-img">
-                            <img src="img\portfolio\ffprobe-ffmpeg-converter/converter img 1.png" alt="portfolio"
-                                data-screenshots="img\portfolio\ffprobe-ffmpeg-converter/converter format.png,
-                                        img\portfolio\ffprobe-ffmpeg-converter/converter img 1.png,
-                                        img\portfolio\ffprobe-ffmpeg-converter/converter img 2.png">
+                            <img src="img\portfolio\ffprobe-ffmpeg-converter\converter img 1.png" alt="portfolio"
+                                data-screenshots="img\portfolio\ffprobe-ffmpeg-converter\converter format.png,
+                                        img\portfolio\ffprobe-ffmpeg-converter\converter img 1.png,
+                                        img\portfolio\ffprobe-ffmpeg-converter\converter img 2.png">
                             <span class="view-project">view project</span>
                         </div>
                         <p class="portfolio-item-title">ffprobe, ffmpeg Video Format Converter</p>
@@ -747,7 +745,7 @@
                                     <p>
                                         Specified format shown in first screenshot.
                                     </p>
-                                    <h3>Features Achieved</h3>
+                                    <h3>Features Completed</h3>
                                     <p>
                                         (1) ffprobe used to examine video formats and txt file report generated correctly, indicating all problematic fields for each specific files.
                                     </p>
@@ -762,89 +760,198 @@
                                         <li>Module - <span>Intelligent Signal Processing</span></li>
                                         <li>Project Type - <span>School(Individual)</span></li>
                                         <li>Libraries - <span>ffprobe, ffmpeg, pathlib</span></li>
-                                        <li>Github - <span><a href="https://-/">https://to-be-uploaded</a></span></li>
+                                        <li>Github - <span><a href="https://-/">Uploaded after submission deadline</a></span></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="row portfolio-items">
-                    <!-- Mozilla DeepSpeech -->
-                    <div class="portfolio-item" data-category="Python">
-                        <div class="portfolio-item-inner outer-shadow">
-                            <div class="portfolio-item-img">
-                                
-                                <img src="img\portfolio\traffic-monitoring-system/traffic monitoring system img 1.png" alt="portfolio"
-                                    data-screenshots="img\portfolio\traffic-monitoring-system/traffic monitoring system img 1.png,
-                                            img\portfolio\traffic-monitoring-system/traffic monitoring system img 2.png">
-                                <span class="view-project">view project</span>
-                            </div>
-                            <p class="portfolio-item-title">Speech Recognition System (Mozilla DeepSpeech)</p>
-    
-                            <div class="portfolio-item-details">
-                                <div class="row">
-                                    <div class="description">
-                                        <h3>Project Description:</h3>
-                                        <p>
-                                            The application must run on a Jupyter notebook written in Python and use the OpenCV library.
-                                            Technically, the algorithm of the application must be based on the frame differencing and 
-                                            background subtraction techniques.
-                                        </p>
-                                        <h4>Tasks:</h4>
-                                        <p>
-                                            (1) develop an application for detecting and tracking moving cars from a camera recording.
-                                        </p>
-                                        <p>
-                                            (2) count the number of cars to the city center(towards left of the junction based on camera recording).
-                                        </p>
-                                        <h3>Features Achieved</h3>
-                                        <p>
-                                            Object detection achieved using background subtraction. Differentiating pedestrians, cyclists and vehicles using contour area.
-                                        </p>
-                                        <p>
-                                            Object tracking achieved using centroid of contour area. Euclidean distance between centroids of current and previous frame calculated
-                                            and used to decide if they are the same vehicle. 
-                                        </p>
-                                        <p>
-                                            When a vehicle exits the frame, its centroid from previous frame will not be close enough
-                                            to any of the centroids in current frame, this is how we decide if a vehicle has exited the screen. If the positional x value of an exiting
-                                            centroid is below 215 pixels (about 1/4 of the screen), we will count it as one car going towards the city center.
-                                        </p>
-                                        <p>
-                                            Vertically overlapping vehicles would have their contours combined and detected as one object. Thus, I split any detected object into 2 separate
-                                            objects if their height is greater than 130 and area greater than 13500. This allow us to track them as 2 separate vehicles.
-                                        </p>
-                                        <p>
-                                            Stopped vehicles are still detected based on the difference of the background frame and the current frame (excluding the first 2 stopped vehicles).
-                                        </p>
-                                        <h3>Future Improvements</h3>
-                                        <p>
-                                            1) Vehicle direction can be determined by calculating previous and current frame's positional x value and subtracting them to determine 
-                                            the direction. If current frame x - previous frame x is negative, it can be said that the vehicle is going towards the city center.
-                                        </p>
-                                        <p>
-                                            2) Improve algorithm to detecting separate objects which are too close to each other.
-                                        </p>
-                                        <p>
-                                            3) Background subtractor fails to detect the first 2 vehicles once they have stopped at the junction due to the learning rate of the background subtractor.
-                                            Parameters should be optimised for them to be detected.
-                                        </p>
-                                    </div>
-                                    <div class="info">
-                                        <h3>Project info:</h3>
-                                        <ul>
-                                            <li>Date - <span>Dec 2021</span></li>
-                                            <li>Module - <span>Intelligent Signal Processing</span></li>
-                                            <li>Project Type - <span>School(Individual)</span></li>
-                                            <li>Libraries - <span></span></li>
-                                            <li>Github - <span><a href="https://-/">https://to-be-uploaded</a></span></li>
-                                        </ul>
-                                    </div>
+                <!-- Mozilla DeepSpeech -->
+                <div class="portfolio-item" data-category="Python">
+                    <div class="portfolio-item-inner outer-shadow">
+                        <div class="portfolio-item-img">
+                            <img src="img\portfolio\traffic-monitoring-system\traffic monitoring system img 1.png" alt="portfolio"
+                                data-screenshots="img\portfolio\traffic-monitoring-system\traffic monitoring system img 1.png,
+                                        img\portfolio\traffic-monitoring-system\traffic monitoring system img 2.png">
+                            <span class="view-project">view project</span>
+                        </div>
+                        <p class="portfolio-item-title">Speech Recognition System (Mozilla DeepSpeech)</p>
+
+                        <div class="portfolio-item-details">
+                            <div class="row">
+                                <div class="description">
+                                    <h3>Project Description:</h3>
+                                    <p>
+                                        A software development company has contacted you to create a speech recognition system to 
+                                        integrate in a Python project they are developing. In particular, the project consists of an airport 
+                                        virtual assistant.
+                                    </p>
+                                    <h4>Tasks:</h4>
+                                    <p>
+                                        (1) Base the speech recognition system on the Mozilla DeepSpeech software package.
+                                    </p>
+                                    <p>
+                                        (2) Capable of language-selection, at the very least compatible with the following languages: English, 
+                                        Italian and Spanish.
+                                    </p>
+                                    <p>
+                                        (3) The airport virtual assistant will be installed in an environment that can be extremely noisy. 
+                                        So, the speech recognition system should be configured to be able to handle this situation. 
+                                        Your client gives you freedom for implementing any solution (for example, to configure in 
+                                        python a gain/amplification, low pass filter, or some other audio filter to improve the error 
+                                        rate).
+                                    </p>
+                                    <p>
+                                        (4) The company has prepared a set of audio files with which you can evaluate the system. For 
+                                        this evaluation, you will test how well it recognises several phrases in each language. You 
+                                        also have to record and evaluate two short sentences (your_sentence1.wav and 
+                                        your_sentence2.wav). Feel free to prepare your own sentences
+                                    </p>
+                                    <h3>Features Completed</h3>
+                                    <p>
+                                        (1) Console based application. Allows language selection by entering the language name. 
+                                        e.g. "English", "english" or 'en'.
+                                    </p>
+                                    <p>
+                                        (2) Mozilla DeepSpeech model and scorer is loaded in the application based on the language
+                                        selected by user. 
+                                    </p>
+                                    <p>
+                                        (3) Spectral subtraction and low pass filter applied to audio files to attempt to reduce background
+                                        noise. Crowd noise used for spectral subtraction downloaded from: https://mixkit.co/free-sound-effects/crowd/
+                                        Librosa library load() and stft() function is used, along with numpy to load and transform the sample values
+                                        into a subtractable form for spectral subtraction. Scipy library is used to perform low pass filter.
+                                    </p>
+                                    <p>
+                                        (4) Performance is evaluated by processing the predicted texts with the transcript texts. 
+                                        Overall performance result: 
+                                    </p>
+                                    <p>
+                                        English word error rate(WER) of 18.84%, Spanish WER of 35.71% and Italian WER of 36.67
+                                    </p>
+                                    <h3>Future Improvements</h3>
+                                </div>
+                                <div class="info">
+                                    <h3>Project info:</h3>
+                                    <ul>
+                                        <li>Date - <span>Dec 2021</span></li>
+                                        <li>Module - <span>Intelligent Signal Processing</span></li>
+                                        <li>Project Type - <span>School(Individual)</span></li>
+                                        <li>Libraries - <span>deepspeech</span></li>
+                                        <li>Github - <span><a href="https://-/">Uploaded after submission deadline</a></span></li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
+                <!-- Django web app -->
+                <div class="portfolio-item" data-category="Web">
+                    <div class="portfolio-item-inner outer-shadow">
+                        <div class="portfolio-item-img">
+                            <img src="img\portfolio\social-net-app\home-page.png" alt="portfolio"
+                                data-screenshots="img\portfolio\social-net-app\registration-page.png,
+                                        img\portfolio\social-net-app\home-page.png,
+                                        img\portfolio\social-net-app\home-page-2.png,
+                                        img\portfolio\social-net-app\search-user-kwargs-b.png,
+                                        img\portfolio\social-net-app\self-profile-page.png,
+                                        img\portfolio\social-net-app\friend-list-page.png,
+                                        img\portfolio\social-net-app\friend-profile-page.png,
+                                        img\portfolio\social-net-app\chat-list-page.png,
+                                        img\portfolio\social-net-app\chat-page.png,
+                                        img\portfolio\social-net-app\friend-detail-api.png">
+                            <span class="view-project">view project</span>
+                        </div>
+                        <p class="portfolio-item-title">Social Networking Web Application (Django)</p>
+
+                        <div class="portfolio-item-details">
+                            <div class="row">
+                                <div class="description">
+                                    <h3>Project Description:</h3>
+                                    <p>
+                                        Implement your own social network web application. 
+                                    </p>
+                                    <h3>Application Requirements:</h3>
+                                    <p>
+                                        (1) Allow users to create new password secured accounts.
+                                    </p>
+                                    <p>
+                                        (2) Collect and store an appropriate amount of information about each user (e.g. user name, use picture).
+                                    </p>
+                                    <p>
+                                        (3) Each user should have a "home" page that shows their user information and any other interesting data such 
+                                        as images, picture galleries or other media files. And displays user status updates. These home pages should be 
+                                        discoverable and visible to other users.
+                                    </p>
+                                    <p>
+                                        (4)	Users should be able to post status updates to their "home" page.
+                                    </p>
+                                    <p>
+                                        (5) Users should be able to search for other users and “add” them to their network of contacts or friends.
+                                    </p>
+                                    <p>
+                                        (6) Users should also be able to view a list of their friends. 
+                                    </p>
+                                    <p>
+                                        (7) Additionally users should be able to use a portion of the application that makes use of real time communication 
+                                        by using web sockets. Some examples may be realtime chat between friends, a basic computer game or media/audio streaming. 
+                                        You are free to use web sockets as you wish but you must include 1 web sockets app in your application.
+                                    </p>
+                                    <h3>Features Completed</h3>
+                                    <p>
+                                        (1) Users may register and login to their account with an email and password.
+                                    </p>
+                                    <p>
+                                        (2) Email, username, password, profile image, date joined and last login date of user is stored in the database.
+                                    </p>
+                                    <p>
+                                        (3) User may post status on their home page and it can be viewed only by themselves or their friends. Post may or may not
+                                        include an image but must have captions or texts written.
+                                    </p>
+                                    <p>
+                                        (4) User may search for other users via the search bar.
+                                    </p>
+                                    <p>
+                                        (5) Users may view a list of their friends and chats with them.
+                                    </p>
+                                    <p>
+                                        (6) Users may start a new chat with friends. Past messages will be displayed.
+                                    </p>
+                                    <p>
+                                        (7) User and friend list API written. Nested serializers used to display list of friends of a specific user.
+                                    </p>
+                                    <h3>Future Improvements</h3>
+                                    <p>
+                                        (1) Use of websocket to enable async messages between friends. The current issue faced is that I am unable to display past messages
+                                        despite the websocket private chat rooms being implemented successfully. How I would usually pass data using Objects.get() method does
+                                        not work with the HTML codes for websocket private chat.
+                                    </p>
+                                    <p>
+                                        (2) When users update their profile image, it seems that the image does not update itself but when the web browser cache is cleared, the
+                                        profile image updates to the correct image. Not sure if there is any solution for the cache to be cleared automatically when user updates
+                                        the profile image.
+                                    </p>
+                                    <p>
+                                        (3) Resizing and recropping of images in application can be implemented to better standardize image size and ratio. Currently, images are
+                                        forcibly resized to the size defined by the style of the element in HTML file.
+                                    </p>
+                                </div>
+                                <div class="info">
+                                    <h3>Project info:</h3>
+                                    <ul>
+                                        <li>Date - <span>Mar 2022</span></li>
+                                        <li>Module - <span>Advanced Web Development</span></li>
+                                        <li>Project Type - <span>School(Individual)</span></li>
+                                        <li>Tools - <span>Django</span></li>
+                                        <li>Database - <span>SQLite3</span></li>
+                                        <li>Github - <span><a href="https://-/">Uploaded after submission deadline</a></span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <!-- personal portfolio -->
                 <div class="portfolio-item" data-category="Web">
                     <div class="portfolio-item-inner outer-shadow">
